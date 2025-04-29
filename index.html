@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exerciții cu document.cookie</title>
-  <link rel="stylesheet" href="https://unpkg.com/minimal-css@1.0.0/minimal.css">
-  <style>
-    body { padding: 2rem; }
-    section { margin-bottom: 2rem; }
-    code { background: #f4f4f4; padding: 0.5rem; display: block; }
-  </style>
-</head>
-<body>
-  <h1>Exerciții cu document.cookie</h1>
+<html>
 
-  <script> document.cookie = "session=test GDPR"; document.cookie = "favorite_task=collect Data"; function alertCookie() { alert(document.cookie); } </script>
+<head>
+    <title>Cookie</title>
+    <style>
+        h1 {
+            color: green
+        }
+    </style>
+</head>
+
+<body onload="getCookies()">
+    <h1>GeeksforGeeks!</h1>
+    <h3>Here are the cookies baked by this document:</h3>
+
+    <!-- Paragraph element to display all cookies -->
+    <p id="cookies"></p>
+
+    <!-- Fetch cookies and display them in the
+        above paragraph element -->
+    <script>
+        function getCookies() {
+            document.getElementById("cookies").innerHTML =
+                document.cookie;
+        }
+    </script>
 </body>
+
 </html>
