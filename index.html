@@ -10,17 +10,34 @@
     </style>
 </head>
 
-<body onload="getCookies()">
-    <h1>Cookie Tutorial</h1>
-    <h3>Here are the cookies baked by this document:</h3>
+<body>
+    <h1>Setare Cookie test</h1>
 
-    <!-- Paragraph element to display all cookies -->
+    <!-- Name for Cookie -->
+    <input type="text" id="key" placeholder="Name">
+
+    <!-- Value for the cookie -->
+    <input type="text" id="val" placeholder="Value">
+    <br>
+
+    <!-- button to set cookie -->
+    <button onclick="setCookie()">Set a cookie</button>
+    <br>
+
+    <!-- Button to get cookie -->
+    <button onclick="getCookie()">Get cookies</button>
+
+    <!-- Empty Paragraph element to display Cookies -->
     <p id="cookies"></p>
-
-    <!-- Fetch cookies and display them in the
-        above paragraph element -->
     <script>
-        function getCookies() {
+        // Set cookies
+        function setCookie() {
+            document.cookie =
+                document.getElementById('key').value + "="
+                + document.getElementById('val').value;
+        }
+        // Get cookies
+        function getCookie() {
             document.getElementById("cookies").innerHTML =
                 document.cookie;
         }
