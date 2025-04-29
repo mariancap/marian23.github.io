@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Cookie Page</title>
+  <link rel="stylesheet" href="https://unpkg.com/minimal-css@1.0.0/minimal.css">
+</head>
+<body>
+  <header>
+    <h1>Bine ai venit!</h1>
+    <p>Acest site testează cookie-urile în GitHub Pages.</p>
+  </header>
+
+  <main>
+    <h2>Cookie Test</h2>
+    <p>Apasă butonul de mai jos pentru a vedea ce cookie-uri sunt setate.</p>
+    <button onclick="alertCookie()">Afișează cookie-urile</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Marian Nicolae Cap</p>
+  </footer>
+
+  <script>
+    document.cookie = "session=test GDPR";
+    document.cookie = "favorite_task=collect Data";
+
+    function alertCookie() {
+      alert("Cookie-urile salvate sunt:\n\n" + document.cookie);
+    }
+  </script>
+</body>
+</html>
